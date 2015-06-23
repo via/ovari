@@ -62,7 +62,8 @@ Returns a json list of all configured environments
 
 ### POST /v1/environments/:environment
 ### PATCH /v1/environments/:environment
-Creates or updates an environment
+### DELETE /v1/environments/:environment
+Creates, updates, or deletes an environment
 
 Pass in a json body containing the initial package list and macros:
 {
