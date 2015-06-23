@@ -25,13 +25,16 @@ Collection that returns a JSON list of all job IDs
 
 ### GET /v1/jobs/:jobid
 Returns information about a job:
+```
 {
   "status": "building",
   "started": "2015-06-23 11:23:49 EDT",
   "environment": "centos-6-x86_64",
   "log": "/v1/jobs/:jobid/log",
 }
--or-
+```
+ or
+```
 {
   "status": "success",
   "started": "2015-06-23 11:23:49 EDT",
@@ -44,7 +47,9 @@ Returns information about a job:
   ],
   "srpm": "/v1/jobs/:jobid/rpms/blah.src.rpm"
 }
--or-
+```
+ or
+````
 {
   "status": "failed",
   "started": "2015-06-23 11:23:49 EDT",
@@ -53,7 +58,7 @@ Returns information about a job:
   "log": "/v1/jobs/:jobid/log",
   "srpm": "/v1/jobs/:jobid/rpms/blah.src.rpm"
 }
-
+```
 ### DELETE /v1/jobs/:jobid
 Deletes the job and all associated files
 
@@ -94,10 +99,11 @@ Pass in a yum repo file
 Start a new job, pass in an SRPM as the body.
 
 Returns a json body:
+```
 {
   "jobid": "abcdefg",
   "joburl: "/v1/jobs/abcdefg"
 }
-
+```
 ### GET /v1/environments/:environment/jobs/
 Returns a json list of all job IDs associated with this environment
